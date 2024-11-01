@@ -1,0 +1,33 @@
+2. Folder Breakdown
+
+    api/:
+        Contains classes responsible for making HTTP requests to your Node.js API.
+        Example: api_service.dart will have a class to handle GET, POST, PUT, DELETE methods with the base URL.
+
+    models/:
+        Stores the data models (typically Dart classes) that represent the structure of data in your app.
+        Example: user_model.dart would define the User class with fields and JSON parsing methods, representing the user data coming from your API.
+
+    screens/:
+        Holds the main screens (pages) of the app. Each screen corresponds to a distinct feature or view in the app.
+        Examples: home_screen.dart for the home page, and login_screen.dart for the login screen.
+
+    providers/:
+        For managing app state and business logic using provider or another state management solution.
+        Example: auth_provider.dart would handle user authentication state and provide relevant data to the widgets.
+
+    repositories/:
+        Acts as an abstraction layer between the API and providers. Repositories interact with API services and manage complex business logic, ensuring that providers stay lightweight.
+        Example: auth_repository.dart would communicate with api_service.dart and expose authentication methods.
+
+    utils/:
+        Contains helper files like constants, formatters, and utility functions.
+        Examples: constants.dart for API endpoints or app-wide constants, and helpers.dart for reusable utility functions.
+
+    widgets/:
+        Reusable custom widgets or components that can be used across multiple screens.
+        Examples: custom_button.dart for a stylized button component, and loading_spinner.dart for a loading indicator.
+
+3. Main File (main.dart)
+
+This file initializes the app, sets up routes, and handles global configurations. It’s generally kept simple to maintain readability.
